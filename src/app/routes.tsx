@@ -6,9 +6,10 @@ import { accessibleRouteChangeHandler } from '@app/utils/utils';
 import { Dashboard } from '@app/Dashboard/Dashboard';
 import { NotFound } from '@app/NotFound/NotFound';
 import DocumentTitle from 'react-document-title';
-import { CubeIcon, CubesIcon } from '@patternfly/react-icons';
+import { TerminalIcon, CubeIcon, CubesIcon } from '@patternfly/react-icons';
 import { LastLocationProvider, useLastLocation } from 'react-router-last-location';
 import WebConsole from './WebConsole/WebConsole';
+import TestVM from './TestVM/TestVM';
 import accessibleStyles from '@patternfly/react-styles/css/utilities/Accessibility/accessibility';
 import spacingStyles from '@patternfly/react-styles/css/utilities/Spacing/spacing';
 import { css } from '@patternfly/react-styles';
@@ -90,6 +91,15 @@ const routes: IAppRoute[] = [
     label: 'OpenShift Web Console',
     path: '/webconsole',
     title: 'OpenShift Web Console'
+  },
+  {
+    component: TestVM,
+    exact: true,
+    icon: TerminalIcon,
+    isAsync: true,
+    label: 'TestVM',
+    path: '/testvm',
+    title: 'TestVM'
   }
 ];
 

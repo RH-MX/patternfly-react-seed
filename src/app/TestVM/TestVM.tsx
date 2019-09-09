@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CubeIcon } from '@patternfly/react-icons';
+import { TerminalIcon } from '@patternfly/react-icons';
 import {
   PageSection,
   Title,
@@ -12,9 +12,9 @@ import accessibleStyles from '@patternfly/react-styles/css/utilities/Accessibili
 import spacingStyles from '@patternfly/react-styles/css/utilities/Spacing/spacing';
 import { css } from '@patternfly/react-styles';
 
-const WebConsole: React.FunctionComponent<any> = (props) => {
+const TestVM: React.FunctionComponent<any> = (props) => {
 
-let target = "https://openshift.rally.redhat.com:8443/console";
+let target = "http://testvm.example.com";
   
     window.open(target,"_blank");
   
@@ -22,12 +22,12 @@ let target = "https://openshift.rally.redhat.com:8443/console";
     return (
     <PageSection>
       <EmptyState variant={EmptyStateVariant.full}>
-        <EmptyStateIcon icon={CubeIcon} />
+        <EmptyStateIcon icon={TerminalIcon} />
         <Title headingLevel="h5" size="lg">
         Redirecting to {target}
         </Title>
         <EmptyStateBody>
-          A new window/tab was opened with OpenShift Web Console.
+          A new window/tab was opened with TestVM.
         </EmptyStateBody>
         
       </EmptyState>
@@ -38,4 +38,4 @@ let target = "https://openshift.rally.redhat.com:8443/console";
   }
 
 
-export default WebConsole;
+export default TestVM;
