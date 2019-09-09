@@ -10,6 +10,9 @@ import {
   EmptyStateBody,
   EmptyStateSecondaryActions
 } from '@patternfly/react-core';
+import accessibleStyles from '@patternfly/react-styles/css/utilities/Accessibility/accessibility';
+import spacingStyles from '@patternfly/react-styles/css/utilities/Spacing/spacing';
+import { css } from '@patternfly/react-styles';
 
 const Support: React.FunctionComponent<any> = (props) => {
   return (

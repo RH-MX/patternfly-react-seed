@@ -6,7 +6,12 @@ import { accessibleRouteChangeHandler } from '@app/utils/utils';
 import { Dashboard } from '@app/Dashboard/Dashboard';
 import { NotFound } from '@app/NotFound/NotFound';
 import DocumentTitle from 'react-document-title';
+import { CubeIcon, CubesIcon } from '@patternfly/react-icons';
 import { LastLocationProvider, useLastLocation } from 'react-router-last-location';
+import WebConsole from './WebConsole/WebConsole';
+import accessibleStyles from '@patternfly/react-styles/css/utilities/Accessibility/accessibility';
+import spacingStyles from '@patternfly/react-styles/css/utilities/Spacing/spacing';
+import { css } from '@patternfly/react-styles';
 let routeFocusTimer: number;
 const getSupportModuleAsync = () => {
   return () => import(/* webpackChunkName: 'support' */ '@app/Support/Support');
@@ -72,19 +77,19 @@ const routes: IAppRoute[] = [
   {
     component: Dashboard,
     exact: true,
-    icon: null,
-    label: 'Dashboard',
+    icon: CubesIcon,
+    label: 'Rally Stages',
     path: '/',
-    title: 'Main Dashboard Title'
+    title: 'Rally stages'
   },
   {
-    component: Support,
+    component: WebConsole,
     exact: true,
-    icon: null,
+    icon: CubeIcon,
     isAsync: true,
-    label: 'Support',
-    path: '/support',
-    title: 'Support Page Title'
+    label: 'OpenShift Web Console',
+    path: '/webconsole',
+    title: 'OpenShift Web Console'
   }
 ];
 

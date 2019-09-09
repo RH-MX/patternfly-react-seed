@@ -8,9 +8,14 @@ import {
   Page,
   PageHeader,
   PageSidebar,
-  SkipToContent
+  SkipToContent,
+  Brand
 } from '@patternfly/react-core';
+import accessibleStyles from '@patternfly/react-styles/css/utilities/Accessibility/accessibility';
+import spacingStyles from '@patternfly/react-styles/css/utilities/Spacing/spacing';
+import { css } from '@patternfly/react-styles';
 import { routes } from '@app/routes';
+import redhatlogo from '@app/assets/images/Logo-RedHat-A-Color-RGBw.png';
 
 interface IAppLayout {
   children: React.ReactNode;
@@ -19,7 +24,7 @@ interface IAppLayout {
 const AppLayout: React.FunctionComponent<IAppLayout> = ({children}) => {
   const logoProps = {
     href: '/',
-    target: '_blank'
+    target: '_self'
   };
   const [isNavOpen, setIsNavOpen] = React.useState(true);
   const [isMobileView, setIsMobileView] = React.useState(true);
@@ -35,9 +40,9 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({children}) => {
   };
   const Header = (
     <PageHeader
-      logo="Patternfly"
+      logo={<Brand src={redhatlogo} alt="Red Hat" />}
       logoProps={logoProps}
-      toolbar="Toolbar"
+      toolbar="Open Innovation Rally"
       showNavToggle={true}
       isNavOpen={isNavOpen}
       onNavToggle={isMobileView ? onNavToggleMobile : onNavToggle}
@@ -49,8 +54,8 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({children}) => {
       <NavList id="nav-list-simple" variant={NavVariants.simple}>
         {routes.map((route, idx) => {
           return (
-            <NavItem key={`${route.label}-${idx}`} id={`${route.label}-${idx}`}>
-              <NavLink exact={true} to={route.path} activeClassName="pf-m-current">{route.label}</NavLink>
+            <NavItem key={`${route.label}-${idx}`} id={`${route.label}-${idx}`} > {route.icon}
+              <NavLink exact={true} to={route.path} activeClassName="pf-m-current">{route.label}</NavLink>{route.icon}
             </NavItem>
           );
         })}
