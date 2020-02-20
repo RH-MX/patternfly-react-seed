@@ -79,9 +79,9 @@ const routes: IAppRoute[] = [
     component: Dashboard,
     exact: true,
     icon: CubesIcon,
-    label: 'Rally Stages',
+    label: 'App menu',
     path: '/',
-    title: 'Rally stages'
+    title: 'App menu'
   },
   {
     component: WebConsole,
