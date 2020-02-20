@@ -8,7 +8,7 @@ import '@app/app.css';
 
 const App: React.FunctionComponent = () => {
   return (
-    <DocumentTitle title="Red Hat - Rally | App Title">
+    <DocumentTitle title="Red Hat - Demo | App Title">
       <Router>
         <AppLayout>
           <AppRoutes />
