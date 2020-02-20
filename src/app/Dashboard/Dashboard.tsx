@@ -32,7 +32,7 @@ const Dashboard: React.FunctionComponent<any> = (props) => {
   <GridItem span={6} rowSpan={12}><Card><CardBody><Grid><GridItem span={2}><h1><Badge>1</Badge></h1></GridItem><GridItem span={4}><a href="http://192.168.122.21" target="_blank"><Brand src={imgOSP} alt="Red Hat OSP" width="560px"></Brand></a></GridItem></Grid></CardBody></Card></GridItem>
   <GridItem span={6} rowSpan={12}><Card><CardBody><Grid><GridItem span={2}><h1><Badge>2</Badge></h1></GridItem><GridItem span={4}><a href="https://cloudforms.example.com" target="_blank"><Brand src={imgCF} alt="Red Hat Cloud Forms" width="560px"></Brand></a></GridItem></Grid></CardBody></Card></GridItem>
   <GridItem span={6} rowSpan={12}><Card><CardBody><Grid><GridItem span={2}><h1><Badge>3</Badge></h1></GridItem><GridItem span={4}><a href="http://tower.example.com" target="_blank"><Brand src={imgAnsible} alt="Red Hat Ansible" width="560px"></Brand></a></GridItem></Grid></CardBody></Card></GridItem>
-  <GridItem span={6} rowSpan={12}><Card><CardBody><Grid><GridItem span={2}><h1><Badge>4</Badge></h1></GridItem><GridItem span={4}><a href="http://backend-ibmzp.apps.amx-576f.open.redhat.com/" target="_blank"><Brand src={imgOCP} alt="Red Hat OCP" width="560px"></Brand></a></GridItem></Grid></CardBody></Card></GridItem>
+  <GridItem span={6} rowSpan={12}><Card><CardBody><Grid><GridItem span={2}><h1><Badge>4</Badge></h1></GridItem><GridItem span={4}><a href="http://backend-ibmz.apps.amx-576f.open.redhat.com/" target="_blank"><Brand src={imgOCP} alt="Red Hat OCP" width="560px"></Brand></a></GridItem></Grid></CardBody></Card></GridItem>
   
 </Grid>
          
