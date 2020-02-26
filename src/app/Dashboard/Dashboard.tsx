@@ -18,7 +18,7 @@ const Dashboard: React.FunctionComponent<any> = (props) => {
       <EmptyState variant={EmptyStateVariant.full}>
         <EmptyStateIcon icon={CubesIcon} />
         <Title headingLevel="h1" size="4xl">
-        Rally Stages
+        Modern Web App
         </Title>
         <EmptyStateBody>
           <br></br>
