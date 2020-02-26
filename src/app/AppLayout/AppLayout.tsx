@@ -42,7 +42,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({children}) => {
     <PageHeader
       logo={<Brand src={redhatlogo} alt="Red Hat" />}
       logoProps={logoProps}
-      toolbar="Open Innovation Rally"
+      toolbar="Modern Web App Demo"
       showNavToggle={true}
       isNavOpen={isNavOpen}
       onNavToggle={isMobileView ? onNavToggleMobile : onNavToggle}
